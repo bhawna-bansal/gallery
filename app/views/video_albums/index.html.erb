@@ -11,8 +11,8 @@
     <%  @video_albums.each do |video| %>
       <div class="col-md-4 mt-4 mb-5">
         <div class="card text">
-           <%= image_tag video.thumbnail, class: "card-img-top imp thumbnail" if video.thumbnail.attached? %>
-           <div class="card-body">
+        <%= link_to image_tag(video.thumbnail, class: "card-img-top imp thumbnail") ,video_album_path(video) %>      
+             <div class="card-body">
              <h5 class="card-title color fs-3"><%= link_to video.title, video_album_path(video) ,class: "color"%></h5>
              <p class="card-text text fs-3"><%= video.desc %></p>
              <small class="text-muted mb-5"><%= time_ago_in_words(video.created_at) %> ago</small>

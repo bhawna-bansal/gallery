@@ -10,7 +10,7 @@
    <%  @video_albums.each do |video| %>
      <div class="col-md-4 mt-4 mb-5">
        <div class="card">
-         <%= image_tag video.thumbnail, class: "card-img-top thumbnail" if video.thumbnail.attached? %>
+       <%= link_to image_tag(video.thumbnail, class: "card-img-top  thumbnail") ,video_album_path(video) %>      
          <div class="card-body">
            <h5 class="card-title fs-4 "><%= link_to video.title, video_album_path(video),class:"color" %></h5>
            <p class="card-text text fs-4"><%= video.desc %></p>

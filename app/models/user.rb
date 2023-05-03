@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-   devise :database_authenticatable, :registerable,
+    devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable
- has_many :video_albums
- after_create :welcome_send
+  has_many :video_albums
+  after_create :welcome_send
   
   private
   def welcome_send

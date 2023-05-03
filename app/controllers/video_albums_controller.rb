@@ -15,31 +15,31 @@ class VideoAlbumsController < ApplicationController
 
   def create 
     @video_album = current_user.video_albums.new(video_album_params)
-    if @video_album.save
+    if  @video_album.save
       redirect_to video_albums_path
       else
-       render :new
+        render :new
     end
   end
 
   def edit
-   @video_album = current_user.video_albums.find(params[:id])
+    @video_album = current_user.video_albums.find(params[:id])
   end
 
   def update
-   @video_album= current_user.video_albums.find(params[:id])
-   if  @video_album.update(video_album_params)
-     redirect_to  @video_album
-     else
-       render :edit, status: :unprocessable_entity
-   end
- end
+    @video_album= current_user.video_albums.find(params[:id])
+    if  @video_album.update(video_album_params)
+      redirect_to  @video_album
+      else
+        render :edit, status: :unprocessable_entity
+    end
+  end
 
- def destroy
-   @video_album = current_user.video_albums.find(params[:id])
-   @video_album.destroy
-   redirect_to video_albums_path, status: :see_other
- end
+  def destroy
+    @video_album = current_user.video_albums.find(params[:id])
+    @video_album.destroy
+    redirect_to video_albums_path, status: :see_other
+  end
 
   private
   def video_album_params
