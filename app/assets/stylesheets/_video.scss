@@ -1,0 +1,28 @@
+.video {
+        width: 100%;
+        height: 50vh;
+        position:relative;
+        bottom:30px;
+        display: flex;
+        justify-content: center;
+        object-fit: cover;
+        top: 0;
+        z-index: -2;
+        margin: 0;
+        padding: 0;
+       
+       }
+
+.video1{
+    position: absolute;
+    top: 18rem;
+    left:40rem;
+   
+}
+.search{
+    width:400px;
+    height: 50px;
+    left: 50rem;
+    justify-content: center !important;
+    // border-radius: 10%;
+}

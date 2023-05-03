@@ -1,0 +1,36 @@
+<div class="container-fluid">
+ <div class="row d-flex ">
+   <div class="col-md-5 p-0">
+     <div class="m-0 img">
+       <%= image_tag asset_path('background1.png'), :class => "img"%>
+     </div>
+   </div>
+   <div class="col-md-6 mx-5 align-item-center mb-5 mx-5">
+     <h1 class="mt-4 fs-2">Sign in</h1>
+     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+     <div class="field fs-4 mt-4">
+       <%= f.label :email,class: "fs-4" %><br />
+       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+     </div>
+
+     <div class="field mt-4 fs-4">
+       <%= f.label :password,class: "fs-4" %><br />
+       <%= f.password_field :password, autocomplete: "current-password" %>
+     </div>
+
+      <% if devise_mapping.rememberable? %>
+      <div class="field fs-4">
+         <%= f.check_box :remember_me %>
+         <%= f.label :remember_me %>
+      </div>
+      <% end %>
+
+     <div class="actions">
+      <%= f.submit "Log in",class: "btn btn-primary mt-4 fs-4 text-center " %>
+     </div>
+     <% end %>
+     <div class="mt-4 fs-5 color" >
+     <%= render "users/shared/links",class: "mt-4 color" %>
+   </div>
+  </div>
+</div>
