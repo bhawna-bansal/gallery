@@ -68,8 +68,8 @@ config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
 :user_name => '74875e1a22f9a8',
 :password => '0273d842f2aa45',
-:address => 'sandbox.smtp.mailtrap.io',
-:domain => 'sandbox.smtp.mailtrap.io',
+:address => 'smtp.mailtrap.io',
+:domain => 'smtp.mailtrap.io',
 :port => '2525',
 :authentication => :cram_md5
 }

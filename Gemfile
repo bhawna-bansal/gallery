@@ -32,6 +32,8 @@ gem 'devise'
 
 gem 'ransack'
 
+
+gem 'mailtrap', '~> 1.2.1'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
