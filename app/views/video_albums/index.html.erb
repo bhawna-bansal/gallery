@@ -1,11 +1,11 @@
 <%= video_tag "video4.mp4", autoplay: :autoplay,loop: :loop,class:"video" %>
 <div class="container mb-5">
   <div class="row mt-4 ">
-   <div class="text-center mt-4 ">
+   <div class="text-center mt-4 color ">
       <h1>My Video Albums <h1>
    </div>
    <div class="text-end d-flex mt-4  bordre-primary rounded-pill ">
-     <h3 class="col-md-6">Create New Album</h3>
+     <h3 class="col-md-6 ">Create New Album</h3>
      <%= link_to 'Create', new_video_album_path,class: "btn btn-secondary fs-5 mx-4 " %>
    </div>
     <%  @video_albums.each do |video| %>
@@ -15,8 +15,10 @@
              <div class="card-body">
              <h5 class="card-title color fs-3"><%= link_to video.title, video_album_path(video) ,class: "color"%></h5>
              <p class="card-text text fs-3"><%= video.desc %></p>
+             <div class="d-flex mx-auto>
              <small class="text-muted mb-5"><%= time_ago_in_words(video.created_at) %> ago</small>
-             <%= link_to 'Edit', edit_video_album_path(video),class: "btn btn-secondary text mx-5" %>
+             <%= link_to 'Edit', edit_video_album_path(video),class: "btn btn-secondary text mx-5 justify-content-end" %>
+             </div>
            </div>
         </div>
       </div>
