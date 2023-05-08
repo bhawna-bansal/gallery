@@ -2,11 +2,11 @@
 <div class="container mb-5">
   <div class="row mt-4 ">
    <div class="text-center mt-4 color ">
-      <h1>My Video Albums <h1>
+      <h1>MY VIDEO ALBUMS <h1>
    </div>
    <div class="text-end d-flex mt-4  bordre-primary rounded-pill ">
-     <h3 class="col-md-6 ">Create New Album</h3>
-     <%= link_to 'Create', new_video_album_path,class: "btn btn-secondary fs-5 mx-4 " %>
+     <h3 class="col-md-6 ">Create Album</h3>
+     <%= link_to 'NEW', new_video_album_path,class: "btn btn-secondary fs-5 mx-4 " %>
    </div>
     <%  @video_albums.each do |video| %>
       <div class="col-md-4 mt-4 mb-5">

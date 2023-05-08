@@ -1,8 +1,8 @@
 <%= video_tag "video4.mp4", autoplay: :autoplay,loop: :loop,class:"video mt-3" %>
-<div class="mt-3 video1">
+<div class="mt-3 video1 row">
   <%= search_form_for @q, url: root_path do |f| %>
-    <%= f.search_field :tags_name_cont,class: "search mx-0" %>
-    <%= f.submit class:"btn btn-lg fs-1 mx-0 color"%>
+    <%= f.search_field :tags_name_cont,class: "search" %>
+    <%= f.submit class:"search_btn color"%>
   <% end %>
 </div>
 <div class="container mt-5 mb-5">

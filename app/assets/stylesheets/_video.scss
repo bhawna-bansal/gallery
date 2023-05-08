@@ -14,15 +14,29 @@
        }
 
 .video1{
+    width:40%;
+    min-width: 250px;
     position: absolute;
     top: 20vh;
     left:35vw;
    
-}
+
 .search{
-    width:21rem;
-    height: 3rem;
-    // left: 50vw !important;
-    justify-content: center !important;
+    width:60%;
+    font-size: 1.4rem;
+    padding:0.6rem;
+    border-radius: 15px 0 0 15px;
+    border-right:none;
+    margin: 0;
     
+}
+.search_btn{
+    @extend .search;
+    width:16%;
+    border-left:none;
+    border-right: 2px solid rgb(0, 0, 0);
+    border-radius: 0 15px 15px 0;
+    margin: 0;
+}
+
 }
