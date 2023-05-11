@@ -1,22 +1,23 @@
-<%= video_tag "video4.mp4", autoplay: :autoplay,loop: :loop,class:"video" %>
-<div class="container mb-5">
-  <div class="row mt-4 ">
-   <div class="text-center mt-4 color ">
-      <h1>MY VIDEO ALBUMS <h1>
-   </div>
+<%= video_tag "video4.mp4", autoplay: :autoplay, loop: :loop, class: "video" %>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12 text-center mb-4">
+      <h1>MY VIDEO ALBUMS</h1>
+    </div>
   
-    <%  @video_albums.each do |video| %>
-      <div class="col-md-4 mt-4 mb-5">
+    <% @video_albums.each do |video| %>
+      <div class="col-md-4 mb-4">
         <div class="card text">
-        <%= link_to image_tag(video.thumbnail, class: "card-img-top thumbnail") ,video_album_path(video) %>      
-             <div class="card-body">
-             <h5 class="card-title color fs-3"><%= link_to video.title, video_album_path(video) ,class: "color"%></h5>
-             <p class="card-text text fs-3"><%= video.desc %></p>
-             <div class="d-flex mx-auto>
-             <small class="text-muted mb-5"><%= time_ago_in_words(video.created_at) %> ago</small>
-             <%= link_to 'Edit', edit_video_album_path(video),class: "btn btn-secondary text mx-5 justify-content-end" %>
-             </div>
-           </div>
+          <%= link_to image_tag(video.thumbnail, class: "card-img-top thumbnail"), video_album_path(video) %>      
+          <div class="card-body">
+            <h5 class="card-title color fs-3"><%= link_to video.title, video_album_path(video),class: "color" %></h5>
+            <p class="card-text text"><%= video.desc %></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted"><%= time_ago_in_words(video.created_at) %> ago</small>
+              <%= link_to 'Edit', edit_video_album_path(video), class: "btn btn-secondary" %>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
