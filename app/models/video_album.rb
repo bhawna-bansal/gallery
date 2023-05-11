@@ -3,6 +3,9 @@ class VideoAlbum < ApplicationRecord
   has_one_attached :video      
   belongs_to :user
   has_and_belongs_to_many :tags
+  validates :thumbnail, presence: true
+  validates :video, presence: true
+
 
   def self.ransackable_attributes(auth_object = nil)
       ["Published", "created_at", "desc", "id", "title", "updated_at", "user_id", "tag_list"]

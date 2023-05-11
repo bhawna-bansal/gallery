@@ -1,21 +1,24 @@
 <div class="container-fluid ">
- <div class="row d-flex ">
-   <div class="col-md-5 p-0">
+ <div class="row ">
+ <div class="d-none d-md-block col-md-4 p-0">
+
      <div class="m-0 img">
-       <%= image_tag asset_path('background1.png'), :class => "img"%>
+       <%= image_tag asset_path('background1.png'), :class => "img-fluid h-100"%>
      </div>
    </div>
-   <div class="col-md-6 mx-5 align-item-center mb-5 mx-5">
-     <h1 class="mt-4 fs-2">Sign in</h1>
+   <div class="col-md-7 d-flex flex-column  mb-5 mx-5">
+     <h1 class="fw-bold mt-4 color">Sign in</h1>
      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-     <div class="field fs-4 mt-4">
-       <%= f.label :email,class: "fs-4" %><br />
-       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="mx -auto">
+
+     <div class="field mt-4">
+       <%= f.label :email,:class=>"fs-3" %><br />
+       <%= f.email_field :email, autofocus: true, autocomplete: "email",:class=>"fs-5" %>
      </div>
 
      <div class="field mt-4 fs-4">
-       <%= f.label :password,class: "fs-4" %><br />
-       <%= f.password_field :password, autocomplete: "current-password" %>
+       <%= f.label :password,:class=>"fs-3" %><br />
+       <%= f.password_field :password, autocomplete: "current-password",:class=>"fs-5" %>
      </div>
 
       <% if devise_mapping.rememberable? %>
@@ -33,4 +36,5 @@
      <%= render "users/shared/links",class: "mt-4 color" %>
    </div>
   </div>
+</div>
 </div>
